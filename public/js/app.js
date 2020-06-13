@@ -1976,15 +1976,17 @@ __webpack_require__.r(__webpack_exports__);
         url: "/api/files",
         addRemoveLinks: true,
         maxFiles: 1
-      }
+      },
+      fileName: ''
     };
   },
   methods: {
     uploadSuccess: function uploadSuccess(file, response) {
       console.log('File Successfully Uploaded with file name: ' + response.file);
+      this.fileName = response.file;
     },
     uploadError: function uploadError(file, message) {
-      console.log('File Unsuccesfully Uploaded');
+      console.log('An Error Occurred');
     },
     fileRemoved: function fileRemoved() {}
   }
